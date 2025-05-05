@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JJ idea</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="carousel">
+    <button class="skip-button">Pular</button>
+    <div class="logo">
+      <img src="./imagens2/logotipo.png" alt="logotipo" />
+    </div>
+    <div class="slide active">
+      <div class="divimagem">
+        <img src="./imagens2/1.png" alt="pessoa-estudando", id="imgestudo">
+      </div>
+      <div class="textos">
+        <h1>Boas-vindas ao EtecHub!</h1>
+        <p>Vamos transformar seus esforços em resultados, juntos!</p>
+      </div>
+    </div>
+
+    <!-- Segundo Slide -->
+    <div class="slide">
+      <div class="divimagem">
+        <img src="./imagens2/2.png" id="imgs">
+      </div>
+      <div class="textos">
+        <h1>Aprendizado personalizado</h1>
+        <p>Conteudo aqui.</p>
+      </div>
+    </div>
+
+    <!-- Terceiro Slide -->
+    <div class="slide">
+      <div class="divimagem">
+        <img src="./imagens2/3.png" alt="pessoa-estudando", id="imgestudo2">
+      </div>
+      <div class="textos">
+        <h1>Acelere Seus Resultados!</h1>
+        <p>Conteúdo do terceiro slide aqui.</p>
+      </div>
+    </div>
+
+    <!-- Quarto Slide -->
+    <div class="slide" id="slide4">
+      <div class="divimagem">
+      <img src="./imagens2/4.png" id="imgs">
+    </div>
+      <div class="textos">
+        <h1>Aprenda da melhor forma!</h1>
+        <p>Mensagem do quarto slide aqui.</p>
+      </div>
+      <!-- Adicionando os botões no quarto slide -->
+      <div class="buttons-container">
+        <button class="register">Quero me cadastrar</button>
+        <button class="login">Entrar</button>
+      </div>
+    </div>
+
+    <!-- Botões de navegação -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+    <!-- Indicadores -->
+    <div class="indicators">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

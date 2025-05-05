@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+ body {
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.logo img {
+  height: auto;
+  width: 180px;
+  max-width: 30vh;
+  position: fixed; /* Faz o logotipo ficar fixo */
+  top: 0;
+  left: 10%;
+  transform: translateX(-50%); 
+  z-index: 1000; 
+}
+
+
+.skip-button {
+  position: fixed;
+  top: 6%;
+  right: 6%;
+  background-color: #701a1a; /* Vinho */
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1001;
+  font-weight: bold;
+}
+
+
+.textos {
+  padding: 25px;
+  
+}
+
+.textos h1 {
+  font-size: 4vh;
+  background: linear-gradient(to right, black, #a31919);
+  background-clip: text;
+  color: transparent;
+  display: inline;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.562); 
+}
+
+.textos p {
+  color: rgba(43, 42, 42, 0.815);
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 45vh;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  top: 0;
+  left: 0;
+
+  & img{
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 0;
+  }
+}
+
+.slide.active {
+  display: flex;
+  flex-direction: column;
+  animation: fade 1s ease-in-out;
+  opacity: 1;
+  top: -40%;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 4; }
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 52%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  background: linear-gradient(to right, black, #a31919);
+  background-clip: text;
+  color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px 20px;
+  border-radius: 50%;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button.prev {
+  left: 20px;
+  animation: fade 1s ease-in-out;
+  outline: none;
+}
+
+button.next {
+  right: 20px;
+  outline: none;
+}
+
+
+.indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  gap: 8px; /* Espaço entre as bolinhas */
+  top: 90%;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #fd000048;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.dot.active {
+  background-color: #531717;
+  width: 40px;
+  height: 7px;
+  border-radius: 50px;
+}
+
+.indicators .dot.active {
+  width: 40px;
+  height: 7px; 
+  border-radius: 50px; 
+}
+
+.indicators .dot:not(:last-child) {
+  margin-right: -4px; 
+}
+
+.buttons-container button {
+  width: 100%; 
+  padding: 18px 0; 
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  
+
+}
+.register{
+  background: #531717;
+}
+button.login {
+  background-color: white; 
+  color: #531717;
+  font-size: 16px;
+  padding: 15px ;  
+  border-radius: 8px;
+  border: 3px solid #531717;  
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column; /* Empilha os botões verticalmente */
+  align-items: center;
+  gap: 13px; /* Espaço entre os botões */
+  position: absolute;
+  bottom: 20px; /* Faz os botões ficarem mais próximos do final da tela */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza os botões horizontalmente */
+  width: 90%; /* Largura de 90% da tela */
+  top: 123%;
+}
+
+
+@media (min-width: 768px) {
+  .slide-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .slide img {
+    max-height: 80vh;
+  }
+  .divimagem {
+    width: 50%;
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+}
+  
+@media (max-width: 480px) {
+  .logo img {
+    width: 120px;
+    left: 15%;
+  }
+}
+  .slide img {
+    max-height: 40vh;
+  }
+
+
+  .carousel-control {
+    font-size: 2rem;
+    padding: 5px 15px;
+  }
+  #imgestudo{
+    height: auto;
+    width: 400px;
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
